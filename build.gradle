@@ -1,6 +1,7 @@
+// 스프링부트를 사용하기 위한 플러그인 설정
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.1'
+	id 'org.springframework.boot' version '3.2.3'
 	id 'io.spring.dependency-management' version '1.1.4'
 }
 
@@ -11,13 +12,29 @@ java {
 	sourceCompatibility = '17'
 }
 
+//각 의존성(라이브러리)를 어떤 원격 저장소에서 받을 지 정하는 부분
 repositories {
 	mavenCentral()
 }
 
+//개발에 필요한 의존성(라이브러리)를 선언하는 부분
 dependencies {
+
+	/* API */
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	/* Test */
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	/* lombok */
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	/* H2 Database */
+	implementation 'com.h2database:h2'
+
+	/* Jpa */
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {
