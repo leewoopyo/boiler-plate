@@ -23,7 +23,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     #jpa 사용 환경에서 data.sql을 정상적으로 동작하게 하는 옵션
     defer-datasource-initialization: true
     show-sql: true
