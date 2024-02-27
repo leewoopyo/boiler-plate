@@ -1,15 +1,13 @@
 package com.project.woopii.domain.sample;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.woopii.core.entity.Sample;
+import com.project.woopii.core.response.BaseResponse;
 
 import lombok.RequiredArgsConstructor;
 
@@ -29,8 +27,8 @@ public class SampleController {
      * Sample 전체 조회
      */
     @GetMapping
-    public List<Sample> getSamples() {
-        return sampleService.getSamples();
+    public BaseResponse<List<Sample>> getSamples() {
+        return BaseResponse.successWithData(sampleService.getSamples());
     }
 
     /* POST ENDPOINT */
