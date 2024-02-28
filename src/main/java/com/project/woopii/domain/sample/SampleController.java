@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.woopii.core.entity.Sample;
-import com.project.woopii.core.response.BaseResponse;
+import com.project.woopii.core.response.CommonResponse;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,8 +27,8 @@ public class SampleController {
      * Sample 전체 조회
      */
     @GetMapping
-    public BaseResponse<List<Sample>> getSamples() {
-        return BaseResponse.successWithData(sampleService.getSamples());
+    public CommonResponse<List<Sample>> getSamples() {
+        return CommonResponse.successWithData(sampleService.getSamples());
     }
 
     /* POST ENDPOINT */
