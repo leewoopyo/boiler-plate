@@ -11,9 +11,10 @@
 - submodule 추가
   - submodule 대상은 core
 
-- domain에 sample 패키지 추가
-  - Class 구성
-    - controller
-    - Service
-    - DomainService
-    - Repository
+- 프로젝트 정보
+   - java
+     - java 17
+   - framawork
+     - spring boot3 
+   - build
+     - gradle
