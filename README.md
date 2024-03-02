@@ -1,5 +1,11 @@
-# boiler-plate
-- woopii's project spring boot boiler plate
+# woopii's project
+- 프로젝트 정보
+   - java
+     - java 17
+   - framawork
+     - spring boot3 
+   - build
+     - gradle
 
 - 패키지
     - core, domain으로 구분
@@ -11,10 +17,3 @@
 - submodule 추가
   - submodule 대상은 core
 
-- 프로젝트 정보
-   - java
-     - java 17
-   - framawork
-     - spring boot3 
-   - build
-     - gradle
