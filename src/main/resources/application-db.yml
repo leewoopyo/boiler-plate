@@ -30,3 +30,18 @@ spring:
 
 ---
 spring.config.activate.on-profile: development
+
+spring:
+  datasource:
+    hikari:
+    # 마스터 설정
+      master:
+        jdbc-url: jdbc:mariadb://localhost:13306/test
+        username: repluser
+        password: 1234
+        driver-class-name: org.mariadb.jdbc.Driver
+    # 슬레이브 설정
+    # slave:
+    #   url: jdbc:mariadb://slave-host:3306/database
+    #   username: root
+    #   password: password
