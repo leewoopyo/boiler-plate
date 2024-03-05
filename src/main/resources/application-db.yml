@@ -41,7 +41,8 @@ spring:
         password: 1234
         driver-class-name: org.mariadb.jdbc.Driver
     # 슬레이브 설정
-    # slave:
-    #   url: jdbc:mariadb://slave-host:3306/database
-    #   username: root
-    #   password: password
+      slave:
+        jdbc-url: jdbc:mariadb://localhost:13307/test
+        username: repluser
+        password: 1234
+        driver-class-name: org.mariadb.jdbc.Driver
