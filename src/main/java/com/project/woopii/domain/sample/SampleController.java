@@ -3,6 +3,7 @@ package com.project.woopii.domain.sample;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,14 @@ public class SampleController {
     @GetMapping
     public CommonResponse<List<Sample>> getSamples() {
         return CommonResponse.successWithData(sampleService.getSamples());
+    }
+
+        /**
+     * Sample 전체 조회
+     */
+    @GetMapping ("/{id}")
+    public CommonResponse<Sample> getSample(@PathVariable Long id) {
+        return CommonResponse.successWithData(sampleService.getSample(id));
     }
 
     /* POST ENDPOINT */
