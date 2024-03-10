@@ -15,5 +15,14 @@
       - domain
         - API, 서비스와 관련된 로직이 있는 영역
 
-- submodule 추가
-  - submodule 대상은 core
+- submodule
+  - 대상
+    - Core
+
+- profile 별 설정
+  - local
+    - DB : H2DB
+  - development
+    - DB : Mariadb
+  - production
+    - DB : 미정
